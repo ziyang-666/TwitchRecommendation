@@ -1,11 +1,13 @@
 model\Item$1.class
+db\MySQLDBUtil.class
+external\TwitchException.class
+servlet\GameServlet.class
 model\Game.class
 model\Game$Builder.class
-external\TwitchException.class
+db\MySQLTableCreator.class
 external\TwitchClient.class
 model\Item.class
 model\ItemType.class
 model\Item$Builder.class
 servlet\SearchServlet.class
-servlet\GameServlet.class
 external\TwitchClient$1.class
