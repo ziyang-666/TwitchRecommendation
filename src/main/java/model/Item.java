@@ -33,6 +33,22 @@ public class Item {
     @JsonProperty("item_type")
     private ItemType type;
     
+    public void setBroadcasterName(String broadcasterName) {
+        this.broadcasterName = broadcasterName;
+    }
+    
+    public void setUrl(String url) {
+        this.url = url;
+    }
+    
+    public void setGameId(String gameId) {
+        this.gameId = gameId;
+    }
+    
+    public void setType(ItemType type) {
+        this.type = type;
+    }
+    
     public String getId() {
         return id;
     }
