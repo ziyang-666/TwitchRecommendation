@@ -131,5 +131,9 @@ public class Item {
             this.type = type;
             return this;
         }
+        
+        public Item build() {
+            return new Item(this);
+        }
     }
 }
