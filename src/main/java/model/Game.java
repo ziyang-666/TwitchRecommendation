@@ -15,7 +15,7 @@ public class Game {
     @JsonProperty("id")
     private final String id;
     
-    @JsonProperty("box_art_ur")
+    @JsonProperty("box_art_url")
     private final String boxArtUrl;
     
     public String getName() {
@@ -35,27 +35,31 @@ public class Game {
         this.id = builder.id;
         this.boxArtUrl = builder.boxArtUrl;
     }
- 
+    
+    @JsonIgnoreProperties(ignoreUnknown = true)
     public static class Builder {
         private String name;
         private String id;
         private String boxArtUrl;
-        
+    
+        @JsonProperty("name")
         public Builder setName(String name) {
             this.name = name;
             return this;
         }
-        
-        public Builder setId(String developer) {
+    
+        @JsonProperty("id")
+        public Builder setId(String id) {
             this.id = id;
             return this;
         }
-        
+    
+        @JsonProperty("box_art_url")
         public Builder setBoxArtUrl(String boxArtUrl) {
             this.boxArtUrl = boxArtUrl;
             return this;
         }
-        
+    
         public Game build() {
             return new Game(this);
         }
