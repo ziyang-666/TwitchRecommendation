@@ -49,15 +49,14 @@ public class MySQLTableCreator {
             statement.executeUpdate(sql);
     
             sql = "CREATE TABLE favorite_records  ("
-                + "id VARCHAR(255) NOT NULL,"
-                + "title VARCHAR(255),"
-                + "url VARCHAR(255),"
-                + "thumbnail_url VARCHAR(255),"
-                + "broadcaster_name VARCHAR(255),"
-                + "game_id VARCHAR(255),"
-                + "type VARCHAR(255) NOT NULL,"
-                + "PRIMARY KEY (id)"
+                + "user_id VARCHAR(255) NOT NULL,"
+                + "item_id VARCHAR(255) NOT NULL,"
+                + "last_favor_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,"
+                + "PRIMARY KEY (user_id, item_id),"
+                + "FOREIGN KEY (user_id) REFERENCES users(id),"
+                + "FOREIGN KEY (item_id) REFERENCES items(id)"
                 + ")";
+            statement.executeUpdate(sql);
             
             // Insert a fake user
             sql = "INSERT INTO users VALUES('1111', '3229C1097C00D497A0FD282D586BE050', 'John', 'Smith')";
