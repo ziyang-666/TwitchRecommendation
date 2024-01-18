@@ -18,6 +18,8 @@
           <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.11.0" />
           <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-core:2.11.0" />
           <element id="library" level="project" name="Maven: org.json:json:20200518" />
+          <element id="library" level="project" name="Maven: mysql:mysql-connector-java:8.0.26" />
+          <element id="library" level="project" name="Maven: com.google.protobuf:protobuf-java:3.11.4" />
           <element id="library" level="project" name="Maven: commons-io:commons-io:2.7" />
           <element id="library" level="project" name="Maven: org.apache.httpcomponents:httpclient:4.5.12" />
           <element id="library" level="project" name="Maven: org.apache.httpcomponents:httpcore:4.4.13" />
