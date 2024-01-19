@@ -45,6 +45,10 @@ public class User {
         return lastName;
     }
     
+    public void setPassword(String password) {
+        this.password = password;
+    }
+    
     @JsonIgnoreProperties(ignoreUnknown = true)
     @JsonInclude(JsonInclude.Include.NON_NULL)
     public static class Builder {
